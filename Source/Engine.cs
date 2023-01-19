@@ -1,11 +1,10 @@
 ﻿using System.Numerics;
-using Core.Objects;
 using Raylib_CsLo;
 using static Raylib_CsLo.Raylib;
 
-namespace Core
+namespace RayEngine
 {
-        public static class Program
+        public static class Engine
         {
                 public static unsafe int Main()
                 {
@@ -46,10 +45,10 @@ namespace Core
 
                                 BeginMode3D(camera);
 
-                                // DrawCube(cubePosition, 2.0f, 2.0f, 2.0f, RED);
-                                // DrawCubeWires(cubePosition, 2.0f, 2.0f, 2.0f, MAROON);
-                                var cube = new Cube(Vector3.Zero, new Vector3(2f, 2f, 2f));
-                                cube.Outline(DARKBLUE);
+                                DrawCube(Vector3.Zero, 2.0f, 2.0f, 2.0f, RED);
+                                DrawCubeWires(Vector3.Zero, 2.0f, 2.0f, 2.0f, MAROON);
+                                // var cube = new Cube(Vector3.Zero, new Vector3(2f, 2f, 2f));
+                                // cube.Outline(DARKBLUE);
 
                                 DrawGrid(32, 1.0f);
 

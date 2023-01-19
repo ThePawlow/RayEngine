@@ -3,7 +3,7 @@ using Raylib_CsLo;
 using static Raylib_CsLo.Raylib;
 
 
-namespace Core.Objects;
+namespace RayEngineNet7.Objects;
 
 public class Cube
 {
