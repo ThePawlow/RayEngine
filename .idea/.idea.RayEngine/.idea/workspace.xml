@@ -5,22 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9c61e69-19f3-4c20-a9fc-34d7bbfe471c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/discord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RayEngine.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Objects/Cube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Objects/Cube.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Engine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayEngine.sln" beforeDir="false" afterPath="$PROJECT_DIR$/RayEngine.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/global.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Engine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Objects/Cube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Objects/Cube.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RayEngine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RayEngine.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/Engine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Objects/Cube.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/048604b12bec4c8b86d43d2e1ea9a62214400/08/1c16db0a/KeyboardKey.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/048604b12bec4c8b86d43d2e1ea9a62214400/18/f6c3bbce/MaterialMap.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/048604b12bec4c8b86d43d2e1ea9a62214400/2d/00526f3a/Raylib.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/048604b12bec4c8b86d43d2e1ea9a62214400/3b/bcb7a511/MouseButton.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/048604b12bec4c8b86d43d2e1ea9a62214400/64/1a57d2a7/Material.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -40,9 +42,9 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "/home/rpa/.config/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
-      "/home/rpa/.config/JetBrains/Rider2022.3/resharper-host/SourcesCache",
-      "/home/rpa/.local/share/Symbols/src"
+      "C:\\Users\\ramon.pawlowski\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\ramon.pawlowski\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\ramon.pawlowski\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
@@ -75,6 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1674131501459</updated>
       <workItem from="1674131502722" duration="1852000" />
+      <workItem from="1674203615577" duration="11801000" />
     </task>
     <servers />
   </component>

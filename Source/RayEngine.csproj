@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Raylib-CsLo" Version="4.2.0.3" />
+      <PackageReference Include="Raylib-cs" Version="4.2.0.1" />
     </ItemGroup>
 
 </Project>

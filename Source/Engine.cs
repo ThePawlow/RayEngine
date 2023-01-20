@@ -1,7 +1,7 @@
 ﻿using System.Numerics;
 using RayEngine.Objects;
-using Raylib_CsLo;
-using static Raylib_CsLo.Raylib;
+using Raylib_cs;
+using static Raylib_cs.Raylib;
 
 namespace RayEngine;
 
@@ -12,19 +12,23 @@ public static class Engine
                 // Initialization
                 InitWindow(1240, 800, "RayEngine");
 
+                var rubberDuck = LoadModel("C:/Git/RayLib/RayEngine/Assets/Models/RubberDuck_LOD0.obj");
+                var tex = LoadTexture("C:/Git/RayLib/RayEngine/Assets/Models/RubberDuck_BaseColor.png");
+                rubberDuck.materials[0].maps[0].texture = tex;
+
                 // Define the camera to look into our 3d world
-                Camera3D camera = new()
+                var camera = new Camera3D()
                 {
-                        position = new(10.0f, 10.0f, 10.0f),// Camera position
-                        target = new(0.0f, 0.0f, 0.0f),// Camera looking at point
+                        position = Vector3.Zero,
+                        target = Vector3.Zero,
                         up = new(0.0f, 1.0f, 0.0f),// Camera up vector (rotation towards target)
                         fovy = 45.0f,// Camera field-of-view Y
-                        projection_ = CameraProjection.CAMERA_PERSPECTIVE// Camera mode type
+                        projection = CameraProjection.CAMERA_PERSPECTIVE
                 };
 
                 SetCameraMode(camera, CameraMode.CAMERA_FREE);// Set a free camera mode
 
-                SetCameraPanControl((int) MouseButton.MOUSE_BUTTON_RIGHT);
+                SetCameraPanControl((KeyboardKey) MouseButton.MOUSE_BUTTON_RIGHT);
 
                 SetTargetFPS(60);// Set our game to run at 60 frames-per-second
 
@@ -34,7 +38,7 @@ public static class Engine
                         // Update
                         UpdateCamera(&camera);// Update camera
 
-                        if (IsKeyDown('Z'))
+                        if (IsKeyDown(KeyboardKey.KEY_Z))
                         {
                                 camera.target = Vector3.Zero;
                         }
@@ -42,31 +46,40 @@ public static class Engine
                         // Draw
                         BeginDrawing();
 
-                        ClearBackground(RAYWHITE);
+                        ClearBackground(Color.RAYWHITE);
 
                         BeginMode3D(camera);
 
                         // Gets replaced by Objects.Cube
-                        var cube = new Cube(Vector3.Zero, new Vector3(2f, 2f, 2f), DARKBLUE);
+                        // var cube = new Cube(Vector3.Zero, new Vector3(2f, 2f, 2f), Color.DARKBLUE);
+                        var enemyText = "Enemy: 100/100 HP";
+                        DrawModel(rubberDuck, Vector3.Zero, 0.1f, Color.WHITE);
+                        var rubberDuckScreenPosition = GetWorldToScreen(rubberDuck.transform.Translation, camera);
+                        rubberDuckScreenPosition.X -= (float) MeasureText(enemyText, 20) / 2;
+
 
                         DrawGrid(32, 1.0f);
 
                         EndMode3D();
 
-                        DrawRectangle(10, 10, 320, 133, Fade(SKYBLUE, 0.5f));
-                        DrawRectangleLines(10, 10, 320, 133, BLUE);
+                        DrawText(enemyText, rubberDuck.transform.Translation, 20, Color.BLACK);
 
-                        DrawText("Free camera default controls:", 20, 20, 10, BLACK);
-                        DrawText("- Mouse Wheel to Zoom in-out", 40, 40, 10, DARKGRAY);
-                        DrawText("- Mouse Right Pressed to Pan", 40, 60, 10, DARKGRAY);
-                        DrawText("- Alt + Mouse Right Pressed to Rotate", 40, 80, 10, DARKGRAY);
-                        DrawText("- Alt + Ctrl + Mouse Right Pressed for Smooth Zoom", 40, 100, 10, DARKGRAY);
-                        DrawText("- Z to zoom to (0, 0, 0)", 40, 120, 10, DARKGRAY);
+                        DrawRectangle(10, 10, 500, 140, Fade(Color.SKYBLUE, 0.5f));
+                        DrawRectangleLines(10, 10, 500, 140, Color.BLUE);
+
+                        DrawText("Free camera default controls:", 20, 20, 20, Color.BLACK);
+                        DrawText("- Mouse Wheel to Zoom in-out", 40, 40, 20, Color.DARKGRAY);
+                        DrawText("- Mouse Right Pressed to Pan", 40, 60, 20, Color.DARKGRAY);
+                        DrawText("- Alt + Mouse Right Pressed to Rotate", 40, 80, 20, Color.DARKGRAY);
+                        DrawText("- Alt + Ctrl + Mouse Right Pressed for Smooth Zoom", 40, 100, 20, Color.DARKGRAY);
+                        DrawText("- Z to zoom to (0, 0, 0)", 40, 120, 20, Color.DARKGRAY);
+                        DrawFPS(10, GetScreenHeight() - 20);
 
                         EndDrawing();
                 }
 
-
+                UnloadModel(rubberDuck);
+                UnloadTexture(tex);
                 CloseWindow();// Close window and OpenGL context
 
                 return 0;

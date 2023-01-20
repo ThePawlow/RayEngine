@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
-using Raylib_CsLo;
-using static Raylib_CsLo.Raylib;
+using Raylib_cs;
+using static Raylib_cs.Raylib;
 
 
 namespace RayEngine.Objects;
@@ -24,7 +24,7 @@ public class Cube
                 DrawCube(position, Size.X, Size.Y, Size.Z, color);
                 if (outlined)
                 {
-                        DrawCubeWires(Position, Size.X, Size.Y, Size.Z, BLACK);
+                        DrawCubeWires(Position, Size.X, Size.Y, Size.Z, Color.BLACK);
                 }
         }
 }
