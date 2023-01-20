@@ -7,8 +7,6 @@
     <list default="true" id="f9c61e69-19f3-4c20-a9fc-34d7bbfe471c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Engine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Objects/Cube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Objects/Cube.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RayEngine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RayEngine.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1674131501459</updated>
       <workItem from="1674131502722" duration="1852000" />
-      <workItem from="1674203615577" duration="11801000" />
+      <workItem from="1674203615577" duration="11869000" />
     </task>
     <servers />
   </component>
