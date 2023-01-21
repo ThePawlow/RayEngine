@@ -9,7 +9,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Raylib-cs" Version="4.2.0.1" />
+        <None Update="resources\**" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Raylib-cs" Version="4.2.0.1" />
     </ItemGroup>
 
 </Project>
