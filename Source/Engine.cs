@@ -15,6 +15,9 @@ public static class Engine
                 var isResourceFolderValid = Directory.Exists(resourceUrl.LocalPath);
 
                 InitWindow(1240, 800, "RayEngine");
+                
+                Console.WriteLine("Lighten some Color");
+                Console.WriteLine(Color.RED.Lighten(new Color(0,100,0,0)));
 
                 var camera = new Camera3D
                 {
