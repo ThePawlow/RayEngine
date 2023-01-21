@@ -11,13 +11,10 @@ public static class Engine
 {
         public static unsafe int Main()
         {
-                var resourceUrl = new Uri(AppContext.BaseDirectory + "resourcessss");
+                var resourceUrl = new Uri(AppContext.BaseDirectory + "resources");
                 var isResourceFolderValid = Directory.Exists(resourceUrl.LocalPath);
 
                 InitWindow(1240, 800, "RayEngine");
-                
-                Console.WriteLine("Lighten some Color");
-                Console.WriteLine(Color.RED.Lighten(new Color(0,100,0,0)));
 
                 var camera = new Camera3D
                 {
@@ -33,7 +30,7 @@ public static class Engine
                 SetTargetFPS(60);
 
                 // Game Loop
-
+                var rubberDuckYaw = 0f;
                 var rubberDuck = LoadModel(resourceUrl.LocalPath + "/Models/RubberDuck_LOD0.obj");
                 var rubberDuckTex = LoadTexture(resourceUrl.LocalPath + "/Models/RubberDuck_BaseColor.png");
                 rubberDuck.materials[0].maps[0].texture = rubberDuckTex;
@@ -60,9 +57,20 @@ public static class Engine
                                         camera.target = Vector3.Zero;
                                 }
 
+                                if (IsKeyDown(KeyboardKey.KEY_Q))
+                                {
+                                        rubberDuckYaw += 10f;
+                                        rubberDuck.transform = Matrix4x4.CreateRotationY(DEG2RAD * rubberDuckYaw);
+                                }
+                                
+                                if (IsKeyDown(KeyboardKey.KEY_E))
+                                {
+                                        rubberDuckYaw -= 10f;
+                                        rubberDuck.transform = Matrix4x4.CreateRotationY(DEG2RAD * rubberDuckYaw);
+                                }
+
                                 // Begin Drawing 3D once all models etc are loaded
-
-
+                                
                                 BeginMode3D(camera);
 
                                 // Gets replaced by Objects.Cube
@@ -94,8 +102,6 @@ public static class Engine
                                 DrawText("- Alt + Ctrl + Mouse Right Pressed for Smooth Zoom", 40, 100, 20, Color.DARKGRAY);
                                 DrawText("- Z to zoom to (0, 0, 0)", 40, 120, 20, Color.DARKGRAY);
                                 DrawFPS(10, GetScreenHeight() - 20);
-
-
                         }
                         EndDrawing();
 

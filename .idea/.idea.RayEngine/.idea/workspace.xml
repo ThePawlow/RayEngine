@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9c61e69-19f3-4c20-a9fc-34d7bbfe471c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/Extensions/Color.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Engine.cs" afterDir="false" />
     </list>
@@ -85,7 +84,7 @@
       <workItem from="1674238744481" duration="4590000" />
       <workItem from="1674302376738" duration="5837000" />
       <workItem from="1674329443740" duration="227000" />
-      <workItem from="1674329690856" duration="2156000" />
+      <workItem from="1674329690856" duration="3990000" />
     </task>
     <servers />
   </component>
