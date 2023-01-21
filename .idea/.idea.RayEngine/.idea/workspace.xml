@@ -8,14 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f9c61e69-19f3-4c20-a9fc-34d7bbfe471c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Burger.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/RubberDuck_BaseColor.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/RubberDuck_LOD0.mtl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/RubberDuck_LOD0.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/RubberDuck_Metallic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/RubberDuck_Normal.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/RubberDuck_Roughness.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RayEngine.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/RayEngine.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Engine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/RayEngine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RayEngine.csproj" afterDir="false" />
     </list>
@@ -90,7 +82,7 @@
       <workItem from="1674203615577" duration="11869000" />
       <workItem from="1674238367561" duration="348000" />
       <workItem from="1674238744481" duration="4590000" />
-      <workItem from="1674302376738" duration="1423000" />
+      <workItem from="1674302376738" duration="4803000" />
     </task>
     <servers />
   </component>
