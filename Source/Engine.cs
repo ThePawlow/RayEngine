@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Numerics;
+using RayEngine.Extensions;
 using Raylib_cs;
 using static Raylib_cs.Raylib;
 
@@ -10,12 +11,12 @@ public static class Engine
 {
         public static unsafe int Main()
         {
-                var resourceUrl = new Uri(AppContext.BaseDirectory + "resources");
+                var resourceUrl = new Uri(AppContext.BaseDirectory + "resourcessss");
                 var isResourceFolderValid = Directory.Exists(resourceUrl.LocalPath);
 
                 InitWindow(1240, 800, "RayEngine");
 
-                var camera = new Camera3D()
+                var camera = new Camera3D
                 {
                         position = Vector3.Zero,
                         target = Vector3.Zero,
@@ -43,7 +44,7 @@ public static class Engine
 
                         if (!isResourceFolderValid)
                         {
-                                DrawText($"Something went wrong initializing the resources\n{resourceUrl}", GetScreenHeight() / 2, GetScreenWidth() / 2, 20, Color.BLACK);
+                                DrawText("Something went wrong initializing the resources\n" + resourceUrl, 10, 10, 20, Color.BLACK);
                         }
                         else
                         {
