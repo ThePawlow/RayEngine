@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Numerics;
-using RayEngine.Extensions;
+using RayEngine.Objects;
 using Raylib_cs;
 using static Raylib_cs.Raylib;
 
@@ -9,11 +9,11 @@ namespace RayEngine;
 
 public static class Engine
 {
+        public static readonly Uri ResourceUrl = new(AppContext.BaseDirectory + "resources");
+        public static readonly bool IsResourceFolderValid = Directory.Exists(ResourceUrl.LocalPath);
+
         public static unsafe int Main()
         {
-                var resourceUrl = new Uri(AppContext.BaseDirectory + "resources");
-                var isResourceFolderValid = Directory.Exists(resourceUrl.LocalPath);
-
                 InitWindow(1240, 800, "RayEngine");
 
                 var camera = new Camera3D
@@ -30,10 +30,7 @@ public static class Engine
                 SetTargetFPS(60);
 
                 // Game Loop
-                var rubberDuckYaw = 0f;
-                var rubberDuck = LoadModel(resourceUrl.LocalPath + "/Models/RubberDuck_LOD0.obj");
-                var rubberDuckTex = LoadTexture(resourceUrl.LocalPath + "/Models/RubberDuck_BaseColor.png");
-                rubberDuck.materials[0].maps[0].texture = rubberDuckTex;
+                var rubberDuck = new GameModel("RubberDuck_LOD0.obj");
 
                 while (!WindowShouldClose())
                 {
@@ -42,9 +39,9 @@ public static class Engine
                         BeginDrawing();
                         ClearBackground(Color.RAYWHITE);
 
-                        if (!isResourceFolderValid)
+                        if (!IsResourceFolderValid)
                         {
-                                DrawText("Something went wrong initializing the resources\n" + resourceUrl, 10, 10, 20, Color.BLACK);
+                                DrawText("Something went wrong initializing the resources\n" + ResourceUrl.LocalPath, 10, 10, 20, Color.BLACK);
                         }
                         else
                         {
@@ -59,24 +56,22 @@ public static class Engine
 
                                 if (IsKeyDown(KeyboardKey.KEY_Q))
                                 {
-                                        rubberDuckYaw += 10f;
-                                        rubberDuck.transform = Matrix4x4.CreateRotationY(DEG2RAD * rubberDuckYaw);
+                                        rubberDuck.Rotate(10f);
                                 }
-                                
+
                                 if (IsKeyDown(KeyboardKey.KEY_E))
                                 {
-                                        rubberDuckYaw -= 10f;
-                                        rubberDuck.transform = Matrix4x4.CreateRotationY(DEG2RAD * rubberDuckYaw);
+                                        rubberDuck.Rotate(-10f);
                                 }
 
                                 // Begin Drawing 3D once all models etc are loaded
-                                
+
                                 BeginMode3D(camera);
 
                                 // Gets replaced by Objects.Cube
                                 // var cube = new Cube(Vector3.Zero, new Vector3(2f, 2f, 2f), Color.DARKBLUE);
                                 var enemyText = "Enemy: 100/100 HP";
-                                DrawModel(rubberDuck, Vector3.Zero, 0.1f, Color.WHITE);
+                                DrawModel(rubberDuck.Model, Vector3.Zero, 0.1f, Color.WHITE);
                                 // var rubberDuckScreenPosition = GetWorldToScreen(rubberDuck.transform.Translation, camera);
                                 // rubberDuckScreenPosition.X -= (float) MeasureText(enemyText, 20) / 2;
 
@@ -108,8 +103,8 @@ public static class Engine
                         #endregion
                 }
 
-                UnloadModel(rubberDuck);
-                UnloadTexture(rubberDuckTex);
+                UnloadModel(rubberDuck.Model);
+                // UnloadTexture(rubberDuckTex);
                 CloseWindow();// Close window and OpenGL context
 
                 return 0;
