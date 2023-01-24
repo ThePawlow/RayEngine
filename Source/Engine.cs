@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Numerics;
+using RayEngine.Components;
 using RayEngine.Objects;
 using Raylib_cs;
 using static Raylib_cs.Raylib;
@@ -56,12 +57,12 @@ public static class Engine
 
                                 if (IsKeyDown(KeyboardKey.KEY_Q))
                                 {
-                                        rubberDuck.Rotate(10f);
+                                        rubberDuck.Rotate(-10f);
                                 }
 
                                 if (IsKeyDown(KeyboardKey.KEY_E))
                                 {
-                                        rubberDuck.Rotate(-10f);
+                                        rubberDuck.Rotate(10f);
                                 }
 
                                 // Begin Drawing 3D once all models etc are loaded
@@ -90,12 +91,9 @@ public static class Engine
                                 DrawRectangleLines(10, 10, 500, 140, Color.BLUE);
 
                                 // FontSize 20 is default ~ 14 for 4k
-                                DrawText("Free camera default controls:", 20, 20, 20, Color.BLACK);
-                                DrawText("- Mouse Wheel to Zoom in-out", 40, 40, 20, Color.DARKGRAY);
-                                DrawText("- Mouse Right Pressed to Pan", 40, 60, 20, Color.DARKGRAY);
-                                DrawText("- Alt + Mouse Right Pressed to Rotate", 40, 80, 20, Color.DARKGRAY);
-                                DrawText("- Alt + Ctrl + Mouse Right Pressed for Smooth Zoom", 40, 100, 20, Color.DARKGRAY);
-                                DrawText("- Z to zoom to (0, 0, 0)", 40, 120, 20, Color.DARKGRAY);
+
+                                var text = new Text("RayEngine", new Vector2(20, 20), 11, Color.BLACK);
+                                DrawText(text.Content, (int)text.Pos.X, (int)text.Pos.Y, text.FontSize, text.Color);
                                 DrawFPS(10, GetScreenHeight() - 20);
                         }
                         EndDrawing();

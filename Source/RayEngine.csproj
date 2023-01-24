@@ -10,10 +10,19 @@
 
     <ItemGroup>
         <None Update="resources\**" CopyToOutputDirectory="PreserveNewest" />
+        <None Remove="resources\**" />
     </ItemGroup>
     
     <ItemGroup>
         <PackageReference Include="Raylib-cs" Version="4.2.0.1" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Compile Remove="resources\**" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <EmbeddedResource Remove="resources\**" />
     </ItemGroup>
 
 </Project>
