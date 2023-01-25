@@ -7,9 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9c61e69-19f3-4c20-a9fc-34d7bbfe471c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Source/Components/Rectangle2D.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Components/Objects/Cube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Components/Cube.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Components/Objects/GameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Components/GameModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Components/GameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Components/GameModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Components/Text.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Components/Text2D.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Engine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/SceneControl/Scene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SceneControl/Scene.cs" afterDir="false" />
     </list>
@@ -93,7 +94,7 @@
       <workItem from="1674545647226" duration="46000" />
       <workItem from="1674545709838" duration="2777000" />
       <workItem from="1674558017559" duration="7211000" />
-      <workItem from="1674640825689" duration="5870000" />
+      <workItem from="1674640825689" duration="8414000" />
     </task>
     <servers />
   </component>

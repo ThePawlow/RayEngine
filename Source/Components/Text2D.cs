@@ -13,14 +13,14 @@ public interface IRayText
         Color color {get; set;}
 }
 
-public class Text
+public class Text2D
 {
         public string Content;
         public readonly Vector2 Pos;
         public int FontSize;
         public Color Color;
 
-        public Text(string content, Vector2 pos, int fontSize, Color color)
+        public Text2D(string content, Vector2 pos, int fontSize, Color color)
         {
                 var dpi = GetWindowScaleDPI();
                 
@@ -30,15 +30,8 @@ public class Text
                 Color = color;
         }
 
-        public IRayText Drawable()
+        public void Draw()
         {
-                IRayText rayText = new object() as IRayText;
-                rayText.text = Content;
-                rayText.posX = (int) Pos.X;
-                rayText.posY = (int) Pos.Y;
-                rayText.fontSize = FontSize;
-                rayText.color = Color;
-
-                return rayText;
+                DrawText(Content, (int) Pos.X, (int) Pos.Y, FontSize, Color);
         }
 }
