@@ -3,6 +3,7 @@ using System.IO;
 using System.Numerics;
 using RayEngine.Components;
 using RayEngine.Objects;
+using RayEngine.SceneControl;
 using Raylib_cs;
 using static Raylib_cs.Raylib;
 
@@ -29,6 +30,9 @@ public static class Engine
                 SetCameraMode(camera, CameraMode.CAMERA_FREE);
                 SetCameraPanControl((KeyboardKey) MouseButton.MOUSE_BUTTON_RIGHT);
                 SetTargetFPS(60);
+                
+                var scene = new Scene("Main", true);
+                scene.Add(new Text("RayEngine", new Vector2(20, 20), 11, Color.BLACK));
 
                 // Game Loop
                 var rubberDuck = new GameModel("RubberDuck_LOD0.obj");
@@ -92,8 +96,8 @@ public static class Engine
 
                                 // FontSize 20 is default ~ 14 for 4k
 
-                                var text = new Text("RayEngine", new Vector2(20, 20), 11, Color.BLACK);
-                                DrawText(text.Content, (int)text.Pos.X, (int)text.Pos.Y, text.FontSize, text.Color);
+                                scene.DrawableTexts();
+                                
                                 DrawFPS(10, GetScreenHeight() - 20);
                         }
                         EndDrawing();

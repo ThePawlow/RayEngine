@@ -1,22 +1,44 @@
-using System;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using RayEngine.Components;
 using Raylib_cs;
+using static Raylib_cs.Raylib;
 
 namespace RayEngine.SceneControl;
 
 public class Scene
 {
-        public interface IText
+        public string Name;
+        public bool IsActive;
+        public readonly Collection<Text> TextCollection = new ();
+
+        public Scene(string name, bool isActive = false)
         {
-                string text {get; set;}
-                int posX {get; set;}
-                int posY {get; set;}
-                int fontSize {get; set;}
-                Color color {get; set;}   
+                Name = name;
+                IsActive = isActive;
         }
 
-        public readonly Collection<IText> TextCollection = default;
+        public void SetActive()
+        {
+                TraceLog(TraceLogLevel.LOG_INFO, $"[SCENE]: Setting Scene {Name} active.");
+                IsActive = true;
+        }
+        public void Add(Text component)
+        {
+                if (TextCollection.Contains(component))
+                {
+                        TraceLog(TraceLogLevel.LOG_DEBUG, "Attempt to register existing TextComponent; Passing");
+                        return;
+                }
+                
+                TextCollection.Add(component);
+        }
 
-        public Action OnReady { get; set; }
-        public Action OnUpdate { get; set; }
+        public void DrawableTexts()
+        {
+                foreach (var text in TextCollection)
+                {
+                        DrawText(text.Content, (int)text.Pos.X, (int) text.Pos.Y, text.FontSize, text.Color);
+                }
+        }
 }

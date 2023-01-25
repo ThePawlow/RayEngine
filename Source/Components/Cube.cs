@@ -3,7 +3,7 @@ using Raylib_cs;
 using static Raylib_cs.Raylib;
 
 
-namespace RayEngine.Objects;
+namespace RayEngine.Components;
 
 public class Cube
 {
