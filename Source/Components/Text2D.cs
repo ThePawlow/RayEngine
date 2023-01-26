@@ -4,16 +4,7 @@ using static Raylib_cs.Raylib;
 
 namespace RayEngine.Components;
 
-public interface IRayText
-{
-        string text {get; set;}
-        int posX {get; set;}
-        int posY {get; set;}
-        int fontSize {get; set;}
-        Color color {get; set;}
-}
-
-public class Text2D
+public class Text2D: GameObject
 {
         public string Content;
         public readonly Vector2 Pos;
