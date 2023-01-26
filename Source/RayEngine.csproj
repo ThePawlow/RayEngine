@@ -10,7 +10,6 @@
 
     <ItemGroup>
         <None Update="resources\**" CopyToOutputDirectory="PreserveNewest" />
-        <None Remove="resources\**" />
     </ItemGroup>
     
     <ItemGroup>
