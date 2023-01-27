@@ -1,6 +1,6 @@
 using System.Numerics;
-using Raylib_cs;
-using static Raylib_cs.Raylib;
+using Raylib_CsLo;
+using static Raylib_CsLo.Raylib;
 
 namespace RayEngine.Components;
 
@@ -17,6 +17,6 @@ public class GameModel
         public void Rotate(float degree)
         {
                 Yaw += degree;
-                Model.transform = Matrix4x4.CreateRotationY(DEG2RAD * Yaw);
+                Model.transform = Matrix4x4.CreateRotationY(Engine.DEG2RAD * Yaw);
         }
 }

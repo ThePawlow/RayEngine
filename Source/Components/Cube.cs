@@ -1,6 +1,10 @@
-﻿using System.Numerics;
-using Raylib_cs;
-using static Raylib_cs.Raylib;
+﻿using System;
+using System.IO;
+using System.Numerics;
+using RayEngine.Components;
+using RayEngine.SceneControl;
+using Raylib_CsLo;
+using static Raylib_CsLo.Raylib;
 
 
 namespace RayEngine.Components;
@@ -24,7 +28,7 @@ public class Cube
                 DrawCube(position, Size.X, Size.Y, Size.Z, color);
                 if (outlined)
                 {
-                        DrawCubeWires(Position, Size.X, Size.Y, Size.Z, Color.BLACK);
+                        DrawCubeWires(Position, Size.X, Size.Y, Size.Z, BLACK);
                 }
         }
 }
