@@ -53,7 +53,7 @@ public static class Engine
         scene.Add(new Rectangle2D(new Vector2(10, 10), new Vector2(500, 140), Fade(SKYBLUE, 0.5f)));
 
         // Game Loop
-        var rubberDuck = new GameModel("RubberDuck_LOD0.obj");
+        var rubberDuck = new GameModel("RubberDuck_LOD0.obj", 0.1f);
 
         while (!WindowShouldClose() && IsWindowReady())
         {
@@ -61,8 +61,6 @@ public static class Engine
 
             BeginDrawing();
             ClearBackground(RAYWHITE);
-            
-            RayGui.GuiMessageBox(new Rectangle(GetScreenHeight() /2 ,GetScreenWidth() / 2, 200, 400), "awd", "awdawd", "awdawd");
 
             scene.DrawableTexts();
             scene.DrawableRectangles();
@@ -88,6 +86,16 @@ public static class Engine
                     rubberDuck.Rotate(10f);
                 }
 
+                if (IsKeyDown(KeyboardKey.KEY_W))
+                {
+                    rubberDuck.MoveForward();
+                }
+                
+                if (IsKeyDown(KeyboardKey.KEY_S))
+                {
+                    rubberDuck.MoveBackwards();
+                }
+
                 // Begin Drawing 3D once all models etc are loaded
 
                 BeginMode3D(camera);
@@ -95,7 +103,7 @@ public static class Engine
                 // Gets replaced by Objects.Cube
                 // var cube = new Cube(Vector3.Zero, new Vector3(2f, 2f, 2f), Color.DARKBLUE);
                 var enemyText = "Enemy: 100/100 HP";
-                DrawModel(rubberDuck.Model, Vector3.Zero, 0.1f, WHITE);
+                rubberDuck.Draw();
                 // var rubberDuckScreenPosition = GetWorldToScreen(rubberDuck.transform.Translation, camera);
                 // rubberDuckScreenPosition.X -= (float) MeasureText(enemyText, 20) / 2;
 

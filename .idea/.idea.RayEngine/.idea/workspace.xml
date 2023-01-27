@@ -7,17 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9c61e69-19f3-4c20-a9fc-34d7bbfe471c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Source/Extensions/Double.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Extensions/Float.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Extensions/Int.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Components/Cube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Components/Cube.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Components/GameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Components/GameModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Components/GameObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Components/GameObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Components/Rectangle2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Components/Rectangle2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Components/Text2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Components/Text2D.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Engine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Extensions/Color.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Extensions/Color.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/RayEngine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RayEngine.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SceneControl/Scene.Components.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SceneControl/Scene.Components.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/SceneControl/Scene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SceneControl/Scene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Extensions/Vector3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Extensions/Vector3.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +31,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/048604b12bec4c8b86d43d2e1ea9a62214400/64/1a57d2a7/Material.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/048604b12bec4c8b86d43d2e1ea9a62214400/fa/831f7f5c/RayCollision.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f88096d00fc84c9880c90f92d8f6c52425200/7e/86a70f90/Raylib.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf298d989854906b90e4f62b2b7c279e9087b9608b9d58edbf994c3ff31f33/Single.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/de1ef7ad7b19413e8a33a827cf50e7aa7f6f9ae7c2f36dd6e0ec79cfc9aacb/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
