@@ -7,14 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9c61e69-19f3-4c20-a9fc-34d7bbfe471c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/Extensions/Double.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Extensions/Float.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/Extensions/Int.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Components/GameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Components/GameModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Engine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Extensions/Color.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Extensions/Color.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Extensions/Vector3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Extensions/Vector3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/SceneControl/Scene.Components.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/SceneControl/Scene.Components.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,17 +16,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Source/Engine.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/048604b12bec4c8b86d43d2e1ea9a62214400/08/1c16db0a/KeyboardKey.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/048604b12bec4c8b86d43d2e1ea9a62214400/18/f6c3bbce/MaterialMap.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/048604b12bec4c8b86d43d2e1ea9a62214400/2d/00526f3a/Raylib.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/048604b12bec4c8b86d43d2e1ea9a62214400/2d/63078a10/CameraProjection.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/048604b12bec4c8b86d43d2e1ea9a62214400/3b/bcb7a511/MouseButton.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/048604b12bec4c8b86d43d2e1ea9a62214400/64/1a57d2a7/Material.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/048604b12bec4c8b86d43d2e1ea9a62214400/fa/831f7f5c/RayCollision.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f88096d00fc84c9880c90f92d8f6c52425200/7e/86a70f90/Raylib.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf298d989854906b90e4f62b2b7c279e9087b9608b9d58edbf994c3ff31f33/Single.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/de1ef7ad7b19413e8a33a827cf50e7aa7f6f9ae7c2f36dd6e0ec79cfc9aacb/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Engine.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -47,6 +33,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\roman\\AppData\\Local\\JetBrains\\Toolbox\\apps\\Rider\\ch-0\\223.8214.53\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
@@ -54,9 +41,9 @@
   },
   &quot;keyToStringList&quot;: {
     &quot;rider.external.source.directories&quot;: [
-      &quot;/home/rpa/.config/JetBrains/Rider2022.3/resharper-host/DecompilerCache&quot;,
-      &quot;/home/rpa/.config/JetBrains/Rider2022.3/resharper-host/SourcesCache&quot;,
-      &quot;/home/rpa/.local/share/Symbols/src&quot;
+      &quot;C:\\Users\\roman\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\roman\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\roman\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
 }</component>
@@ -100,6 +87,8 @@
       <workItem from="1674545709838" duration="2777000" />
       <workItem from="1674558017559" duration="7211000" />
       <workItem from="1674640825689" duration="8414000" />
+      <workItem from="1674934818258" duration="276000" />
+      <workItem from="1674941893757" duration="636000" />
     </task>
     <servers />
   </component>
