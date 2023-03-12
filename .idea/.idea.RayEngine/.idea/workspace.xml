@@ -7,10 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9c61e69-19f3-4c20-a9fc-34d7bbfe471c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Source/Window.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RayEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/Components/Cube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Components/Cube.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Components/GameModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Components/GameModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/Engine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Engine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RayEngine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RayEngine.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +92,8 @@
       <workItem from="1674640825689" duration="8414000" />
       <workItem from="1674934818258" duration="276000" />
       <workItem from="1674941893757" duration="1903000" />
-      <workItem from="1678625872128" duration="1650000" />
+      <workItem from="1678625872128" duration="9057000" />
+      <workItem from="1678646819907" duration="7037000" />
     </task>
     <servers />
   </component>

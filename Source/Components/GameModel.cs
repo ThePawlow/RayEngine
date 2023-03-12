@@ -16,7 +16,7 @@ public class GameModel
 
         public GameModel(string modelUri, float scale = 1f, bool outline = false)
         {
-                Model = LoadModel(Engine.ResourceUrl.LocalPath + "/Models/" + modelUri);
+                Model = LoadModel(Engine.Resources.LocalPath + "/Models/" + modelUri);
                 Scale = scale;
                 Outline = outline;
         }
