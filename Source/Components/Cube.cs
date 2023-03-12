@@ -7,24 +7,18 @@ namespace RayEngine.Components;
 
 public class Cube
 {
-        /// <summary>
-        /// Readonly, as there's no DrawPool yet
-        /// </summary>
-        public readonly Vector3 Size;
-        
-        /// <summary>
-        /// Readonly, as there's no DrawPool yet
-        /// </summary>
         public readonly Vector3 Position;
+        
+        public readonly Vector3 Scale;
 
-        public Cube(Vector3 position, Vector3 size, Color color, bool outlined = true)
+        public Cube(Vector3 position, Vector3 scale, Color color, bool outlined = true)
         {
                 Position = position;
-                Size = new Vector3(size.X, size.Y, size.Z);
-                DrawCube(position, Size.X, Size.Y, Size.Z, color);
+                Scale = new Vector3(scale.X, scale.Y, scale.Z);
+                DrawCube(position, Scale.X, Scale.Y, Scale.Z, color);
                 if (outlined)
                 {
-                        DrawCubeWires(Position, Size.X, Size.Y, Size.Z, BLACK);
+                        DrawCubeWires(Position, Scale.X, Scale.Y, Scale.Z, BLACK);
                 }
         }
 }

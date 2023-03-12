@@ -53,7 +53,7 @@ public static class Engine
         scene.Add(new Rectangle2D(new Vector2(10, 10), new Vector2(500, 140), Fade(SKYBLUE, 0.5f)));
 
         // Game Loop
-        var rubberDuck = new GameModel("RubberDuck_LOD0.obj", 0.1f);
+        var rubberDuck = new GameModel("RubberDuck_LOD0.obj", 0.1f, true);
 
         while (!WindowShouldClose() && IsWindowReady())
         {

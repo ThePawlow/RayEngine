@@ -12,11 +12,13 @@ public class GameModel
         public Model Model;
         public float Scale;
         public float Speed;
+        public bool Outline;
 
-        public GameModel(string modelUri, float scale = 1f)
+        public GameModel(string modelUri, float scale = 1f, bool outline = false)
         {
                 Model = LoadModel(Engine.ResourceUrl.LocalPath + "/Models/" + modelUri);
                 Scale = scale;
+                Outline = outline;
         }
 
         public void Rotate(float degree)
@@ -39,6 +41,11 @@ public class GameModel
         public void Draw()
         {
                 DrawModel(Model, Position, Scale, WHITE);
+
+                if (Outline)
+                {
+                        DrawModelWires(Model, Position, Scale, BLACK);
+                }
         }
 
   
